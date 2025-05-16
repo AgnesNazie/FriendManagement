@@ -9,14 +9,14 @@ public class Friend {
 
     //constructor with id
     public Friend(int id, String name) {
-        setId(id);
+        this.id = id;
         setName(name);
 
     }
 
     //constructor without id
     public Friend(String name) {
-        setId(id);
+        this.id = id;
         setName(name);
 
     }
@@ -26,8 +26,9 @@ public class Friend {
         return id;
 
     }
-
     //setter for id
+
+
     public void setId(int id) {
         if (id < 0)
             throw new InvalidFriendException("ID cannot be null or negative");

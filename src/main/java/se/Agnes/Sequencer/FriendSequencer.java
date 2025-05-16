@@ -1,7 +1,7 @@
 package se.Agnes.Sequencer;
 
 public class FriendSequencer {
-    private static int currentId = 0;
+    public static int currentId = 0;
 
     public static int nextId() {
         return ++currentId;
