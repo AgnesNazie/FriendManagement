@@ -7,7 +7,7 @@ import java.util.List;
 public class FriendManager {
 
     //create a list to store results
-    private List<Friend> friends = new ArrayList<>();
+    private final List<Friend> friends = new ArrayList<>();
 
     // create method to add friends
 
@@ -33,23 +33,20 @@ public class FriendManager {
     }
 
     // create method to removeFriendById(int id)
-    public Friend removeFriendById(int id) {
+    public void removeFriendById(int id) {
         Friend friend = findFriendById(id);
         if (friend != null) {
             friends.remove(friend);
-            return friend;
         }
-        return null;
     }
     //create method to updateFriendName(int id, String newName)
-    public Friend updateFriendName(int id, String newName){
+    public void updateFriendName(int id, String newName){
         for (Friend friend : friends){
             if (friend.getId() == id){
                 friend.setName(newName);
-                return friend;
+                return;
             }
         }
-        return null;
     }
 
 }
